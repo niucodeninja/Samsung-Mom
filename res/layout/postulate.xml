@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <!-- Registration Form -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <!-- Postulate title -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:text="@string/c_postulate_title"
+            android:textSize="18dp" />
+
+        <!-- Full Name Label -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c_register_full_name" />
+
+        <EditText
+            android:id="@+id/pos_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:inputType="textPersonName"
+            android:singleLine="true" />
+
+        <!-- Email Label -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c_postulate_typical_sentence" />
+
+        <EditText
+            android:id="@+id/pos_tipical_sentence"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:inputType="textAutoComplete|textEmailAddress"
+            android:singleLine="false" />
+
+        <!-- Phone Label -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c_postulate_smart_tip" />
+
+        <EditText
+            android:id="@+id/pos_smart_mother_sentence"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:inputType="phone"
+            android:singleLine="false" />
+
+        <!-- Country Label -->
+        <!-- Register Button -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c_postulate_why_postulate" />
+
+        <EditText
+            android:id="@+id/pos_why_be_mother_of_year"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:inputType="phone"
+            android:singleLine="false" />
+
+        <Button
+            android:id="@+id/btnPostulate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/c_postulate_submit" />
+    </LinearLayout>
+
+</ScrollView>

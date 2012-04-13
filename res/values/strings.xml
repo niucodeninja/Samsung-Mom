@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">Mamá Samsung</string>
+    <string name="c_progressbar_title">Cargando</string>
+    <string name="c_progressbar_description">Ok…</string>
+
+    <!-- Pull to refresh -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <string name="pull_to_refresh_refreshing_label">Loading…</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh…</string>
+
+    <!-- Register -->
+    <string name="c_register_full_name">Nombre</string>
+    <string name="c_register_email">Dirección de correo electrónico</string>
+    <string name="c_register_submit">Registrar nuevo usuario</string>
+    <string name="c_register_phone">Número telefonico</string>
+    <string name="c_register_country">País</string>
+    <string name="c_register_prompt">Selecciona un país</string>
+
+    <string-array name="c_register_countries">
+        <item>Colombia</item>
+        <item>Brasil</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string name="c_register_samsung_info">Deseo recibir información de Samsung vía correo electrónico o SMS.</string>
+    <string name="c_register_terms">Acepto los términos y condiciones.</string>
+
+    <!-- Postulate -->
+
+    <string name="c_postulate_title">Ingresa los datos de la mamá que vas a postular, el regístro implica el primer voto.</string>
+    <string name="c_postulate_typical_sentence">Su frase típica es</string>
+    <string name="c_postulate_smart_tip">Tip de Smart Mamá favorito</string>
+    <string name="c_postulate_why_postulate">Porqué debe ser ¡LA MAMÁ DEL AÑO SAMSUNG!</string>
+    <string name="c_postulate_submit">Postular mamá</string>
+
+    <!-- File dialog -->
+    <string name="location">Ubicación</string>
+    <string name="cant_read_folder">La carpeta no puede ser leída!</string>
+    <string name="c_filedialog_back">Regresar</string>
+    <string name="select">Seleccionar</string>
+    <string name="no_data">No hay datos!</string>
+    <color name="gray">#ffff0000</color>
+    <string name="err">Error</string>
+
+</resources>
