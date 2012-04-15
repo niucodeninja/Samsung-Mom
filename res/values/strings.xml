@@ -43,7 +43,21 @@
     <string name="c_filedialog_back">Regresar</string>
     <string name="select">Seleccionar</string>
     <string name="no_data">No hay datos!</string>
+
     <color name="gray">#ffff0000</color>
+
     <string name="err">Error</string>
+    <string name="c_exit_app">Cerrar aplicación</string>
+    <string name="c_ranking">Top mamás</string>
+    <string name="c_postulate">Postular mamá</string>
+    <string name="c_load_imei_error">No fué posible verificar sus datos de acceso a la aplicación, por favor intentelo nuevamente más tarde.</string>
+
+    <!-- reg -->
+    <string name="c_reg_accept_terms">Debes aceptar los términos y condiciones para continuar con el regístro.</string>
+    <string name="c_reg_invalid_name">Ingresa un nombre válido, mayor a dos carecteres de la A-Z.</string>
+    <string name="c_reg_invalid_email">Ingresa un correo electrónico válido.</string>
+    <string name="c_reg_invalid_phone">Ingresa un número telefónico válido, correspondiente a la nomenclatura de tu país.</string>
+    <string name="c_reg_user_ok">Usuario regístrado!.</string>
+    <string name="c_reg_user_fail">No fué posible registrar el usuario, intentelo nuevamente más tarde!.</string>
 
 </resources>

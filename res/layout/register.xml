@@ -27,7 +27,11 @@
             android:layout_marginBottom="20dip"
             android:layout_marginTop="5dip"
             android:inputType="textPersonName"
-            android:singleLine="true" />
+            android:singleLine="true" >
+
+            <requestFocus />
+
+        </EditText>
 
         <!-- Email Label -->
 
@@ -79,13 +83,13 @@
         <!-- Register Button -->
 
         <CheckBox
-            android:id="@+id/checkBox1"
+            android:id="@+id/reg_information"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/c_register_samsung_info" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/reg_terms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/c_register_terms" />

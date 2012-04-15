@@ -27,8 +27,6 @@ public final class R {
     public static final class id {
         public static final int btnPostulate=0x7f07000b;
         public static final int btnRegister=0x7f070017;
-        public static final int checkBox1=0x7f070015;
-        public static final int checkBox2=0x7f070016;
         public static final int fdButtonBack=0x7f070002;
         public static final int fdButtonSelect=0x7f070003;
         public static final int fdLinearLayoutList=0x7f070001;
@@ -46,8 +44,10 @@ public final class R {
         public static final int pull_to_refresh_updated_at=0x7f070010;
         public static final int reg_country=0x7f070014;
         public static final int reg_email=0x7f070012;
+        public static final int reg_information=0x7f070015;
         public static final int reg_name=0x7f070011;
         public static final int reg_phone=0x7f070013;
+        public static final int reg_terms=0x7f070016;
         public static final int relativeLayout01=0x7f070000;
     }
     public static final class layout {
@@ -63,7 +63,10 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040001;
+        public static final int c_exit_app=0x7f04001b;
         public static final int c_filedialog_back=0x7f040017;
+        public static final int c_load_imei_error=0x7f04001e;
+        public static final int c_postulate=0x7f04001d;
         public static final int c_postulate_smart_tip=0x7f040012;
         public static final int c_postulate_submit=0x7f040014;
         /**  Postulate 
@@ -73,6 +76,15 @@ public final class R {
         public static final int c_postulate_why_postulate=0x7f040013;
         public static final int c_progressbar_description=0x7f040003;
         public static final int c_progressbar_title=0x7f040002;
+        public static final int c_ranking=0x7f04001c;
+        /**  reg 
+         */
+        public static final int c_reg_accept_terms=0x7f04001f;
+        public static final int c_reg_invalid_email=0x7f040021;
+        public static final int c_reg_invalid_name=0x7f040020;
+        public static final int c_reg_invalid_phone=0x7f040022;
+        public static final int c_reg_user_fail=0x7f040024;
+        public static final int c_reg_user_ok=0x7f040023;
         public static final int c_register_country=0x7f04000c;
         public static final int c_register_email=0x7f040009;
         /**  Register 

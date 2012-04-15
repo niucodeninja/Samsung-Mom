@@ -4,8 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <!-- The PullToRefreshListView replaces a standard ListView widget. -->
-
     <com.markupartist.android.widget.PullToRefreshListView
         android:id="@+id/android:list"
         android:layout_width="fill_parent"

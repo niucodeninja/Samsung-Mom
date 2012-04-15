@@ -11,6 +11,7 @@ import com.cdi.samsung.views.home.HomeActivity;
 import com.cdi.samsung.views.ranking.RankingActivity;
 import com.cdi.samsung.views.register.RegisterActivity;
 import com.cdi.samsung.views.splashscreen.SplashScreenActivity;
+import com.niucodeninja.activities.ActivityDispatcher;
 
 public class Manager {
 
@@ -21,7 +22,7 @@ public class Manager {
 
 	public String IMEI = "n/a";
 
-	public static final String WS_BASE = "http://200.24.41.187/lfb/App/frontEnd/android/WebLfb/";
+	public static final String WS_BASE = "http://192.168.1.8/index.php";
 
 	private Manager() {
 	}

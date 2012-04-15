@@ -7,6 +7,7 @@
     <uses-sdk android:minSdkVersion="8" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -24,10 +25,14 @@
         </activity>
         <activity android:name=".views.splashscreen.SplashScreenActivity" >
         </activity>
-        <activity android:name=".views.ranking.RankingActivity"></activity>
-        <activity android:name=".views.register.RegisterActivity"></activity>
-        <activity android:name=".app.postulate.PostulateActivity"></activity>
-        <activity android:name="com.lamerman.FileDialogActivity"></activity>
+        <activity android:name=".views.ranking.RankingActivity" >
+        </activity>
+        <activity android:name=".views.register.RegisterActivity" >
+        </activity>
+        <activity android:name=".app.postulate.PostulateActivity" >
+        </activity>
+        <activity android:name="com.lamerman.FileDialogActivity" >
+        </activity>
     </application>
 
 </manifest>
