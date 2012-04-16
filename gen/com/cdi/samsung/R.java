@@ -66,7 +66,12 @@ public final class R {
         public static final int c_exit_app=0x7f04001b;
         public static final int c_filedialog_back=0x7f040017;
         public static final int c_load_imei_error=0x7f04001e;
+        /**  postulate 
+         */
+        public static final int c_pos_fill_all_fields=0x7f040025;
         public static final int c_postulate=0x7f04001d;
+        public static final int c_postulate_fail=0x7f040027;
+        public static final int c_postulate_ok=0x7f040026;
         public static final int c_postulate_smart_tip=0x7f040012;
         public static final int c_postulate_submit=0x7f040014;
         /**  Postulate 
@@ -95,6 +100,11 @@ public final class R {
         public static final int c_register_samsung_info=0x7f04000e;
         public static final int c_register_submit=0x7f04000a;
         public static final int c_register_terms=0x7f04000f;
+        public static final int c_vote=0x7f04002a;
+        public static final int c_vote_fail=0x7f040029;
+        /**   voting 
+         */
+        public static final int c_vote_ok=0x7f040028;
         public static final int cant_read_folder=0x7f040016;
         public static final int err=0x7f04001a;
         public static final int hello=0x7f040000;

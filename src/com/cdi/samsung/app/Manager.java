@@ -21,8 +21,9 @@ public class Manager {
 	private ProgressDialog dialog;
 
 	public String IMEI = "n/a";
+	public String COUNTRY = "n/a";
 
-	public static final String WS_BASE = "http://192.168.1.8/index.php";
+	public static final String WS_BASE = "http://190.85.49.213/samsung_mamadelanno/";
 
 	private Manager() {
 	}

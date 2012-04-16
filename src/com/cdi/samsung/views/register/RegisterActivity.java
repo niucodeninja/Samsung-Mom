@@ -29,6 +29,7 @@ public class RegisterActivity extends Activity implements OnClickListener,
 	private CheckBox user_terms;
 
 	private SamsungMomWebservices ws;
+	private Spinner user_country;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +37,12 @@ public class RegisterActivity extends Activity implements OnClickListener,
 		setContentView(R.layout.register);
 
 		// Countries
-		Spinner countries = (Spinner) findViewById(R.id.reg_country);
+		user_country = ((Spinner) findViewById(R.id.reg_country));
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 				this, R.array.c_register_countries,
 				android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		countries.setAdapter(adapter);
+		user_country.setAdapter(adapter);
 
 		// UI
 
@@ -69,6 +70,7 @@ public class RegisterActivity extends Activity implements OnClickListener,
 			String phone = user_phone.getText().toString();
 			boolean terms = user_terms.isChecked();
 			boolean information = user_information.isChecked();
+			String country = user_country.getSelectedItem().toString();
 
 			if (Validator.isValidName(name)) {
 				if (Validator.isValidEmail(email)) {
@@ -76,7 +78,7 @@ public class RegisterActivity extends Activity implements OnClickListener,
 						if (terms) {
 							Manager.getInstance().displayLoading(this);
 							ws.register(name, email, phone,
-									Manager.getInstance().IMEI, "1",
+									Manager.getInstance().IMEI, country,
 									information);
 						} else {
 							Manager.getInstance().showMessage(
@@ -100,7 +102,6 @@ public class RegisterActivity extends Activity implements OnClickListener,
 				Manager.getInstance().showMessage(this,
 						getResources().getString(R.string.c_reg_invalid_name));
 			}
-
 			break;
 		}
 	}

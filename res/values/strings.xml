@@ -60,4 +60,14 @@
     <string name="c_reg_user_ok">Usuario regístrado!.</string>
     <string name="c_reg_user_fail">No fué posible registrar el usuario, intentelo nuevamente más tarde!.</string>
 
+    <!-- postulate -->
+    <string name="c_pos_fill_all_fields">Ingrese obligatoriamente toda la información. Mayor a 2 caracteres.</string>
+    <string name="c_postulate_ok">La mamá samsung fué postulada con éxito!</string>
+    <string name="c_postulate_fail">No fué posible postular la mamá Samsung, intentalo nuevamente más tarde!</string>
+
+    <!-- voting -->
+    <string name="c_vote_ok">Su voto fué realizado!</string>
+    <string name="c_vote_fail">No fué posible realizar una votación, intentelo más tarde!</string>
+    <string name="c_vote">Votar</string>
+
 </resources>
