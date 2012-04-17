@@ -22,7 +22,9 @@ public class Manager {
 
 	public String IMEI = "n/a";
 	public String COUNTRY = "n/a";
+	public String PASSWORD = "n/a";
 
+	public static final String PASSWORD_HASH = "Sam34@98MA";
 	public static final String WS_BASE = "http://190.85.49.213/samsung_mamadelanno/";
 
 	private Manager() {

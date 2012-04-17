@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import com.cdi.samsung.R;
 import com.cdi.samsung.app.Manager;
 import com.cdi.samsung.app.SamsungMomWebservices;
+import com.cdi.samsung.app.util.Util;
 import com.niucodeninja.webservices.WebServicesEvent;
 
 public class SplashScreenActivity extends Activity implements
@@ -35,8 +36,11 @@ public class SplashScreenActivity extends Activity implements
 			Log.i("SplashScreenActivity",
 					"Phone IMEI: " + Manager.getInstance().IMEI);
 
+			Log.i("SplashScreenActivity", "Password: "
+					+ Manager.getInstance().PASSWORD);
 			// Call the web service for asking availability of IMEI
-			ws.verifyIMEI(Manager.getInstance().IMEI);
+			ws.verifyIMEI(Manager.getInstance().IMEI,
+					Manager.getInstance().PASSWORD);
 			Manager.getInstance().displayLoading(currentActivity);
 		}
 	};
@@ -69,7 +73,8 @@ public class SplashScreenActivity extends Activity implements
 					// get the IMEI
 					TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 					Manager.getInstance().IMEI = telephonyManager.getDeviceId();
-
+					Manager.getInstance().PASSWORD = Util.md5(Manager
+							.getInstance().IMEI + Manager.PASSWORD_HASH);
 					handler.sendEmptyMessage(0);
 				}
 			}

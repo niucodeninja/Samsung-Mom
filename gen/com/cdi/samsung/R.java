@@ -102,7 +102,7 @@ public final class R {
         public static final int c_register_terms=0x7f04000f;
         public static final int c_vote=0x7f04002a;
         public static final int c_vote_fail=0x7f040029;
-        /**   voting 
+        /**  voting 
          */
         public static final int c_vote_ok=0x7f040028;
         public static final int cant_read_folder=0x7f040016;

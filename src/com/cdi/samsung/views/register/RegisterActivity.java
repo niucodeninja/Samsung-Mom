@@ -70,7 +70,7 @@ public class RegisterActivity extends Activity implements OnClickListener,
 			String phone = user_phone.getText().toString();
 			boolean terms = user_terms.isChecked();
 			boolean information = user_information.isChecked();
-			String country = user_country.getSelectedItem().toString();
+			int country = user_country.getSelectedItemPosition() + 1;
 
 			if (Validator.isValidName(name)) {
 				if (Validator.isValidEmail(email)) {
@@ -78,7 +78,8 @@ public class RegisterActivity extends Activity implements OnClickListener,
 						if (terms) {
 							Manager.getInstance().displayLoading(this);
 							ws.register(name, email, phone,
-									Manager.getInstance().IMEI, country,
+									Manager.getInstance().IMEI,
+									Manager.getInstance().PASSWORD, "" + country,
 									information);
 						} else {
 							Manager.getInstance().showMessage(

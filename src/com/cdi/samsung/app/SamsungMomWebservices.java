@@ -15,21 +15,23 @@ public class SamsungMomWebservices extends WebServices {
 		super(base);
 	}
 
-	public void verifyIMEI(String imei) {
+	public void verifyIMEI(String imei, String password) {
 		Params params = new Params();
 		params.AddParam("imei", imei);
+		params.AddParam("clave", password);
 		call("?a=imei", params, RequestMethod.POST, VERIFY_IMEI_COMPLETE,
 				VERIFY_IMEI_ERROR, true);
 	}
 
 	public void register(String name, String email, String phone, String imei,
-			String country, boolean information) {
+			String password, String country, boolean information) {
 		Params params = new Params();
 		params.AddParam("nombre", name);
 		params.AddParam("email", email);
 		params.AddParam("celular", phone);
 		params.AddParam("imei", imei);
 		params.AddParam("id_pais", country);
+		params.AddParam("clave", password);
 		params.AddParam("recibir_info", information == true ? "1" : "0");
 		call("?a=registrar", params, RequestMethod.POST, REGISTER_COMPLETE,
 				REGISTER_ERROR, true);

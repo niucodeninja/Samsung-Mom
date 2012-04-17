@@ -23,7 +23,13 @@
     <string-array name="c_register_countries">
         <item>Colombia</item>
         <item>Brasil</item>
-        <item>Otro</item>
+        <item>Argentina</item>
+        <item>Uruguay</item>
+        <item>Paraguay</item>
+        <item>Chile</item>
+        <item>México</item>
+        <item>Perú</item>
+        <item>Venezuela</item>
     </string-array>
 
     <string name="c_register_samsung_info">Deseo recibir información de Samsung vía correo electrónico o SMS.</string>
