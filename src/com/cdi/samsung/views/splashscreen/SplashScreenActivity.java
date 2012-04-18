@@ -100,6 +100,18 @@ public class SplashScreenActivity extends Activity implements
 				JSONObject json_data = (JSONObject) event.getData();
 				try {
 					if (json_data.getBoolean("existe")) {
+						// Get User Info
+						JSONObject user = json_data.getJSONObject("user");
+
+						Manager.getInstance().ID = user.getString("id");
+						Manager.getInstance().NAME = user.getString("nombre");
+						Manager.getInstance().EMAIL = user.getString("email");
+						Manager.getInstance().PHONE = user.getString("celular");
+						Manager.getInstance().COUNTRY = user
+								.getString("id_pais");
+						Manager.getInstance().POSTULATE = user
+								.getString("postulada");
+
 						Manager.getInstance().getDispatcher()
 								.open(this, "home", true);
 					} else {

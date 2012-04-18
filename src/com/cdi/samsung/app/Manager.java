@@ -20,12 +20,20 @@ public class Manager {
 	private ActivityDispatcher dispatcher;
 	private ProgressDialog dialog;
 
-	public String IMEI = "n/a";
-	public String COUNTRY = "n/a";
-	public String PASSWORD = "n/a";
+	// -- User information
+	public String IMEI;
+	public String COUNTRY;
+	public String PASSWORD;
+	public String NAME;
+	public String EMAIL;
+	public String PHONE;
+	public String POSTULATE;
+	public String ID;
 
 	public static final String PASSWORD_HASH = "Sam34@98MA";
 	public static final String WS_BASE = "http://190.85.49.213/samsung_mamadelanno/";
+	public static final String PHOTO_PATH = WS_BASE + "fotos/";
+	public static final String PHOTO_EXT = ".jpg";
 
 	private Manager() {
 	}

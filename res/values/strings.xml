@@ -41,13 +41,13 @@
     <string name="c_postulate_typical_sentence">Su frase típica es</string>
     <string name="c_postulate_smart_tip">Tip de Smart Mamá favorito</string>
     <string name="c_postulate_why_postulate">Porqué debe ser ¡LA MAMÁ DEL AÑO SAMSUNG!</string>
-    <string name="c_postulate_submit">Postular mamá</string>
+    <string name="c_postulate_submit">Seleccionar fotografía</string>
 
     <!-- File dialog -->
     <string name="location">Ubicación</string>
     <string name="cant_read_folder">La carpeta no puede ser leída!</string>
     <string name="c_filedialog_back">Regresar</string>
-    <string name="select">Seleccionar</string>
+    <string name="select">Postular mamá</string>
     <string name="no_data">No hay datos!</string>
 
     <color name="gray">#ffff0000</color>
@@ -75,5 +75,8 @@
     <string name="c_vote_ok">Su voto fué realizado!</string>
     <string name="c_vote_fail">No fué posible realizar una votación, intentelo más tarde!</string>
     <string name="c_vote">Votar</string>
+    <string name="c_error_loading_moms">No fué posible obtener el listado de Smart Mamás!</string>
+    <string name="c_reg_user_fail_loading">Error obteniendo los datos del usuario registrado.</string>
+    <string name="c_no_postulated_moms">No hay mamás postuladas en este momento!</string>
 
 </resources>

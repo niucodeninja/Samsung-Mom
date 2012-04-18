@@ -10,6 +10,8 @@ import java.net.URL;
 
 import org.apache.http.NameValuePair;
 
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 
 import com.niucodeninja.events.Event;
@@ -26,10 +28,15 @@ public class HttpFileUploader extends EventDispatcher implements Runnable {
 	String fileName;
 	byte[] dataToServer;
 	FileInputStream fileInputStream = null;
+	public String data;
 
 	public HttpFileUploader(String urlString, Params params, String fileName) {
 		try {
 			connectURL = new URL(urlString);
+			if(params != null) {
+				Log.i("HttpFileUploader", "POST " + urlString);
+				Log.i("HttpFileUploader", "Params: " + params.htmlParams());
+			}
 		} catch (Exception ex) {
 			Log.e("HttpFileUploader", ex.getMessage());
 		}
@@ -40,6 +47,20 @@ public class HttpFileUploader extends EventDispatcher implements Runnable {
 	public void doStart(FileInputStream stream) {
 		fileInputStream = stream;
 	}
+
+	private Handler handlerOK = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			dispatchEvent(new Event(ON_UPLOAD_COMPLETE, null));
+		}
+	};
+
+	private Handler handlerFail = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			dispatchEvent(new Event(ON_UPLOAD_ERROR, null));
+		}
+	};
 
 	void requestUpload() {
 		String exsistingFileName = fileName;
@@ -116,16 +137,17 @@ public class HttpFileUploader extends EventDispatcher implements Runnable {
 			while ((ch = is.read()) != -1) {
 				b.append((char) ch);
 			}
-			String s = b.toString();
-			Log.i("HttpFileUploader", "Data: " + s);
+			data = b.toString();
+			Log.i("HttpFileUploader", "Data: " + data);
 			dos.close();
-			dispatchEvent(new Event(ON_UPLOAD_COMPLETE, null));
+			handlerOK.sendEmptyMessage(0);
 		} catch (MalformedURLException ex) {
 			Log.e("HttpFileUploader", "error: " + ex.getMessage(), ex);
-			dispatchEvent(new Event(ON_UPLOAD_ERROR, null));
+			handlerFail.sendEmptyMessage(0);
 		} catch (IOException ioe) {
 			Log.e("HttpFileUploader", "error: " + ioe.getMessage(), ioe);
 			dispatchEvent(new Event(ON_UPLOAD_ERROR, null));
+			handlerFail.sendEmptyMessage(0);
 		}
 	}
 

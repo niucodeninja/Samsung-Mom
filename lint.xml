@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/file_dialog_row.xml" />
+        <ignore path="res/layout/gallery_item.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/file_dialog_main.xml" />
+    </issue>
 </lint>

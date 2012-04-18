@@ -2,6 +2,8 @@ package com.cdi.samsung.views.register;
 
 import java.util.Observable;
 
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +32,13 @@ public class RegisterActivity extends Activity implements OnClickListener,
 
 	private SamsungMomWebservices ws;
 	private Spinner user_country;
+
+	String[] countries = { "CO", "BR", "AR", "UY", "PY", "CL", "MX", "PE", "VE" };
+
+	/*
+	 * 1 Colombia CO 2 Brasil BR 3 Argentina AR 4 Uruguay UY 5 Paraguay PY 6
+	 * Chile CL 7 MŽxico MX 8 Perœ PE 9 Venezuela VE
+	 */
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,22 +74,27 @@ public class RegisterActivity extends Activity implements OnClickListener,
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.btnRegister:
-			String name = user_name.getText().toString();
-			String email = user_email.getText().toString();
-			String phone = user_phone.getText().toString();
+			Manager.getInstance().NAME = user_name.getText().toString();
+			Manager.getInstance().EMAIL = user_email.getText().toString();
+			Manager.getInstance().PHONE = user_phone.getText().toString();
 			boolean terms = user_terms.isChecked();
 			boolean information = user_information.isChecked();
-			int country = user_country.getSelectedItemPosition() + 1;
+			Manager.getInstance().COUNTRY = ""
+					+ (user_country.getSelectedItemPosition() + 1);
 
-			if (Validator.isValidName(name)) {
-				if (Validator.isValidEmail(email)) {
-					if (Validator.isValidPhoneNumber(phone, "CO")) {
+			if (Validator.isValidName(Manager.getInstance().NAME)) {
+				if (Validator.isValidEmail(Manager.getInstance().EMAIL)) {
+					if (Validator.isValidPhoneNumber(
+							Manager.getInstance().PHONE,
+							countries[user_country.getSelectedItemPosition()])) {
 						if (terms) {
 							Manager.getInstance().displayLoading(this);
-							ws.register(name, email, phone,
+							ws.register(Manager.getInstance().NAME,
+									Manager.getInstance().EMAIL,
+									Manager.getInstance().PHONE,
 									Manager.getInstance().IMEI,
-									Manager.getInstance().PASSWORD, "" + country,
-									information);
+									Manager.getInstance().PASSWORD,
+									Manager.getInstance().COUNTRY, information);
 						} else {
 							Manager.getInstance().showMessage(
 									this,
@@ -114,8 +128,18 @@ public class RegisterActivity extends Activity implements OnClickListener,
 			WebServicesEvent event = (WebServicesEvent) data;
 			switch (event.getIdEvent()) {
 			case SamsungMomWebservices.REGISTER_COMPLETE:
-				Manager.getInstance().showMessage(this,
-						getResources().getString(R.string.c_reg_user_ok));
+				JSONObject json_data = (JSONObject) event.getData();
+				try {
+					Manager.getInstance().ID = json_data.getString("id");
+					Manager.getInstance().POSTULATE = "0";
+					Manager.getInstance().showMessage(this,
+							getResources().getString(R.string.c_reg_user_ok));
+				} catch (Exception e) {
+					Manager.getInstance().showMessage(
+							this,
+							getResources().getString(
+									R.string.c_reg_user_fail_loading));
+				}
 				Manager.getInstance().getDispatcher().open(this, "home", true);
 				break;
 			case SamsungMomWebservices.REGISTER_ERROR:
