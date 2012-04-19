@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import com.cdi.samsung.R;
 import com.cdi.samsung.app.Manager;
 import com.cdi.samsung.app.SamsungMomWebservices;
+import com.cdi.samsung.app.models.Mom;
 import com.cdi.samsung.app.util.Util;
 import com.niucodeninja.webservices.WebServicesEvent;
 
@@ -114,6 +115,9 @@ public class SplashScreenActivity extends Activity implements
 
 						Manager.getInstance().getDispatcher()
 								.open(this, "home", true);
+
+						// User mom
+						Manager.getInstance().userMom = new Mom(user);
 					} else {
 						Manager.getInstance().getDispatcher()
 								.open(this, "register", true);

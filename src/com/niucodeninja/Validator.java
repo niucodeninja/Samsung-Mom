@@ -71,9 +71,9 @@ public class Validator {
 	 */
 	public static boolean isValidName(String name) {
 		if (name.length() >= 2) {
-			if (name.matches("[A-Z][a-zA-Z]*")) {
+			//if (name.matches("[A-Z][a-zA-Z]*")) {
 				return true;
-			}
+			//}
 		}
 		return false;
 	}

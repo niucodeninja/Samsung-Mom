@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
@@ -27,10 +28,10 @@ public class HomeActivity extends Activity implements Observer {
 	private final int EXIT_APP = 0x9;
 	private final int RANKING = 0x8;
 	private final int POSTULATE = 0x7;
-	private Gallery moms_gallery;
+	private final int SEE_MY_MOM = 0x6;
 
+	private Gallery moms_gallery;
 	private SamsungMomWebservices ws;
-	private ArrayList<Mom> listOfMoms;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +41,15 @@ public class HomeActivity extends Activity implements Observer {
 		moms_gallery = (Gallery) findViewById(R.id.moms);
 
 		// On select Mom's picture
+		final Activity activity = this;
 		moms_gallery.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0,
-					android.view.View arg1, int arg2, long arg3) {
-				// TODO Auto-generated method stub
-
+					android.view.View arg1, int position, long arg3) {
+				Manager.getInstance().currentMom = Manager.getInstance().listOfMoms
+						.get(position);
+				Manager.getInstance().getDispatcher()
+						.open(activity, "mom", false);
 			}
 		});
 
@@ -57,9 +61,15 @@ public class HomeActivity extends Activity implements Observer {
 	}
 
 	private void loadData() {
-		Manager.getInstance().displayLoading(this);
-		ws.getMoms(Manager.getInstance().IMEI, Manager.getInstance().PASSWORD,
-				Manager.getInstance().COUNTRY);
+		if (Manager.getInstance().listOfMoms == null) {
+			Manager.getInstance().displayLoading(this);
+			ws.getMoms(Manager.getInstance().IMEI,
+					Manager.getInstance().PASSWORD,
+					Manager.getInstance().COUNTRY);
+		} else {
+			moms_gallery.setAdapter(new ImageAdapter(this, Manager
+					.getInstance().listOfMoms));
+		}
 	}
 
 	@Override
@@ -69,6 +79,8 @@ public class HomeActivity extends Activity implements Observer {
 		menu.add(Menu.NONE, RANKING, Menu.NONE, R.string.c_ranking);
 		if (Manager.getInstance().POSTULATE.equals("0")) {
 			menu.add(Menu.NONE, POSTULATE, Menu.NONE, R.string.c_postulate);
+		} else {
+			menu.add(Menu.NONE, SEE_MY_MOM, Menu.NONE, R.string.c_see_my_mom);
 		}
 		return true;
 	}
@@ -92,6 +104,10 @@ public class HomeActivity extends Activity implements Observer {
 			Manager.getInstance().getDispatcher()
 					.open(this, "postulate", false);
 			break;
+		case SEE_MY_MOM:
+			Manager.getInstance().currentMom = Manager.getInstance().userMom;
+			Manager.getInstance().getDispatcher().open(this, "mom", false);
+			break;
 		default:
 			return false;
 		}
@@ -109,15 +125,15 @@ public class HomeActivity extends Activity implements Observer {
 				try {
 					JSONArray moms = json_data.getJSONArray("madres");
 					if (moms.length() > 0) {
-						listOfMoms = new ArrayList<Mom>();
+						Manager.getInstance().listOfMoms = new ArrayList<Mom>();
 						for (int i = 0; i < moms.length(); ++i) {
 							Mom mom = new Mom(moms.getJSONObject(i));
 							if (mom.isOk()) {
-								listOfMoms.add(mom);
+								Manager.getInstance().listOfMoms.add(mom);
 							}
 						}
-						moms_gallery.setAdapter(new ImageAdapter(this,
-								listOfMoms));
+						moms_gallery.setAdapter(new ImageAdapter(this, Manager
+								.getInstance().listOfMoms));
 					} else {
 						Manager.getInstance().showMessage(
 								this,
@@ -125,8 +141,6 @@ public class HomeActivity extends Activity implements Observer {
 										R.string.c_no_postulated_moms));
 					}
 				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
 				break;
 			case SamsungMomWebservices.MOMS_ERROR:
@@ -138,5 +152,15 @@ public class HomeActivity extends Activity implements Observer {
 				break;
 			}
 		}
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			// preventing default implementation previous to
+			// android.os.Build.VERSION_CODES.ECLAIR
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 }

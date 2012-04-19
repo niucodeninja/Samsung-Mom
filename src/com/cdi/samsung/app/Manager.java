@@ -1,13 +1,17 @@
 package com.cdi.samsung.app;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
 
 import com.cdi.samsung.R;
+import com.cdi.samsung.app.models.Mom;
 import com.cdi.samsung.app.postulate.PostulateActivity;
 import com.cdi.samsung.views.home.HomeActivity;
+import com.cdi.samsung.views.mom.MomActivity;
 import com.cdi.samsung.views.ranking.RankingActivity;
 import com.cdi.samsung.views.register.RegisterActivity;
 import com.cdi.samsung.views.splashscreen.SplashScreenActivity;
@@ -35,6 +39,9 @@ public class Manager {
 	public static final String PHOTO_PATH = WS_BASE + "fotos/";
 	public static final String PHOTO_EXT = ".jpg";
 
+	public ArrayList<Mom> listOfMoms;
+	public Mom currentMom, userMom;
+
 	private Manager() {
 	}
 
@@ -54,6 +61,7 @@ public class Manager {
 		dispatcher.addHandler("ranking", RankingActivity.class);
 		dispatcher.addHandler("register", RegisterActivity.class);
 		dispatcher.addHandler("postulate", PostulateActivity.class);
+		dispatcher.addHandler("mom", MomActivity.class);
 		/*
 		 * dispatcher.addHandler("countries", ListCountries.class);
 		 * dispatcher.addHandler("teams", ListTeams.class);

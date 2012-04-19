@@ -7,9 +7,18 @@ import com.cdi.samsung.app.Manager;
 
 public class Mom {
 
+	public int getVotes() {
+		return votes;
+	}
+
+	public void setVotes(int votes) {
+		this.votes = votes;
+	}
+
 	private String id;
 	private String name, typicalSentence, smartMomTip, whyBeASmartMom;
 	private String pic1, pic2, pic3;
+	private int votes;
 	private boolean is_ok = false;
 
 	public Mom(JSONObject object) {
@@ -19,6 +28,9 @@ public class Mom {
 			this.setTypicalSentence(object.getString("frase_tipica"));
 			this.setSmartMomTip(object.getString("smart_favorito"));
 			this.setWhyBeASmartMom(object.getString("frase_porque"));
+			if (!object.isNull("votos")) {
+				this.setVotes(Integer.parseInt(object.getString("votos")));
+			}
 			is_ok = true;
 		} catch (JSONException e) {
 			is_ok = false;

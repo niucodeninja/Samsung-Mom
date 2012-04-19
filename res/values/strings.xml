@@ -4,7 +4,7 @@
     <string name="hello">Hello World!</string>
     <string name="app_name">Mamá Samsung</string>
     <string name="c_progressbar_title">Cargando</string>
-    <string name="c_progressbar_description">Ok…</string>
+    <string name="c_progressbar_description">Espere un momento por favor!</string>
 
     <!-- Pull to refresh -->
     <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
@@ -78,5 +78,10 @@
     <string name="c_error_loading_moms">No fué posible obtener el listado de Smart Mamás!</string>
     <string name="c_reg_user_fail_loading">Error obteniendo los datos del usuario registrado.</string>
     <string name="c_no_postulated_moms">No hay mamás postuladas en este momento!</string>
+    <string name="c_no_ranking_moms">No hay información de ranking.</string>
+    <string name="c_error_loading_ranking">Error, cargando listado de ranking.</string>
+    <string name="c_rating_title">Vota por mi</string>
+    <string name="c_submit_votation">Votar!</string>
+    <string name="c_see_my_mom">Vew mi mamá postulada</string>
 
 </resources>

@@ -12,6 +12,8 @@ public class SamsungMomWebservices extends WebServices {
 	public static final int REGISTER_ERROR = 0x4;
 	public static final int MOMS_COMPLETE = 0x5;
 	public static final int MOMS_ERROR = 0x6;
+	public static final int RANKING_COMPLETE = 0x7;
+	public static final int RANKING_ERROR = 0x8;
 
 	public SamsungMomWebservices(String base) {
 		super(base);
@@ -46,5 +48,14 @@ public class SamsungMomWebservices extends WebServices {
 		params.AddParam("clave", password);
 		call("?a=madres", params, RequestMethod.POST, MOMS_COMPLETE,
 				MOMS_ERROR, true);
+	}
+
+	public void getRanking(String imei, String password, String country) {
+		Params params = new Params();
+		params.AddParam("imei", imei);
+		params.AddParam("id_pais", country);
+		params.AddParam("clave", password);
+		call("?a=ranking", params, RequestMethod.POST, RANKING_COMPLETE,
+				RANKING_ERROR, true);
 	}
 }

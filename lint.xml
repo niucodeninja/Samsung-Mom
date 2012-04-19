@@ -3,6 +3,7 @@
     <issue id="ContentDescription">
         <ignore path="res/layout/file_dialog_row.xml" />
         <ignore path="res/layout/gallery_item.xml" />
+        <ignore path="res/layout/mom.xml" />
     </issue>
     <issue id="UselessParent">
         <ignore path="res/layout/file_dialog_main.xml" />
