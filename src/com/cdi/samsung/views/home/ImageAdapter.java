@@ -22,13 +22,13 @@ public class ImageAdapter extends BaseAdapter {
 	// private Context context;
 	private TypedArray attr;
 	private ArrayList<Mom> listOfMoms;
-	private boolean[] flags;
+	//private boolean[] flags;
 	private LayoutInflater inflater;
 
 	public ImageAdapter(Context context, ArrayList<Mom> listOfMoms) {
 		// this.context = context;
 		this.listOfMoms = listOfMoms;
-		flags = new boolean[listOfMoms.size()];
+		//flags = new boolean[listOfMoms.size()];
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -60,7 +60,7 @@ public class ImageAdapter extends BaseAdapter {
 		 * i.setBackgroundResource(item_background); return i;
 		 */
 		convertView = inflater.inflate(R.layout.gallery_item, null);
-		if (flags[position] == false) {
+		//if (flags[position] == false) {
 			ImageView image = (ImageView) convertView
 					.findViewById(R.id.idImage);
 			//image.setBackgroundResource(item_background);
@@ -70,8 +70,8 @@ public class ImageAdapter extends BaseAdapter {
 			BitmapDownloaderTask task = new BitmapDownloaderTask(image,
 					progressBar);
 			task.execute(listOfMoms.get(position).getPic3());
-			flags[position] = true;
-		}
+			//flags[position] = true;
+		//}
 		convertView.setLayoutParams(new Gallery.LayoutParams(150, 100));
 		//convertView.setLayoutParams(new Gallery.LayoutParams(
 				//LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
