@@ -54,7 +54,6 @@ public class RegisterActivity extends Activity implements OnClickListener,
 		user_country.setAdapter(adapter);
 
 		// UI
-
 		user_name = (EditText) findViewById(R.id.reg_name);
 		user_email = (EditText) findViewById(R.id.reg_email);
 		user_phone = (EditText) findViewById(R.id.reg_phone);
