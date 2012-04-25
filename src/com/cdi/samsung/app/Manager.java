@@ -35,12 +35,14 @@ public class Manager {
 	public String ID;
 
 	public static final String PASSWORD_HASH = "Sam34@98MA";
+	public static final String FACEBOOK_APPID = "279761395447739";
 	public static final String WS_BASE = "http://190.85.49.213/samsung_mamadelanno/";
 	public static final String PHOTO_PATH = WS_BASE + "fotos/";
 	public static final String PHOTO_EXT = ".jpg";
 
 	public ArrayList<Mom> listOfMoms;
 	public Mom currentMom, userMom;
+	public FacebookUtil fbUtil;
 
 	private Manager() {
 	}
@@ -52,6 +54,7 @@ public class Manager {
 	 */
 	public void initialize(Activity mainActivity) {
 		this.mainActivity = mainActivity;
+		this.fbUtil = new FacebookUtil(FACEBOOK_APPID);
 
 		// Initialize the dispatcher
 		dispatcher = new ActivityDispatcher();

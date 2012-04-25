@@ -13,7 +13,15 @@
         android:orientation="vertical"
         android:padding="10dip" >
 
+        
+        
         <!-- Full Name Label -->
+
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c_register_using_fb" />
 
         <TextView
             android:layout_width="fill_parent"

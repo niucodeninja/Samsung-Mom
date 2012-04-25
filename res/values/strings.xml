@@ -83,5 +83,7 @@
     <string name="c_rating_title">Vota por mi</string>
     <string name="c_submit_votation">Votar!</string>
     <string name="c_see_my_mom">Vew mi mamá postulada</string>
+    <string name="c_register_using_fb">Registrar usando facebook</string>
+    <string name="c_facebook_share">Compartir en facebook!</string>
 
 </resources>

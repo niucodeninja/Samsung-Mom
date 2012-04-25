@@ -1,11 +1,18 @@
 package com.cdi.samsung.views.register;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Observable;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -17,13 +24,20 @@ import android.widget.Spinner;
 import com.cdi.samsung.R;
 import com.cdi.samsung.app.Manager;
 import com.cdi.samsung.app.SamsungMomWebservices;
+import com.cdi.samsung.app.SessionStore;
+import com.facebook.android.AsyncFacebookRunner;
+import com.facebook.android.AsyncFacebookRunner.RequestListener;
+import com.facebook.android.DialogError;
+import com.facebook.android.Facebook.DialogListener;
+import com.facebook.android.FacebookError;
+import com.facebook.android.Util;
 import com.niucodeninja.Validator;
 import com.niucodeninja.webservices.WebServicesEvent;
 
 public class RegisterActivity extends Activity implements OnClickListener,
 		java.util.Observer {
 
-	private Button submitButtom;
+	private Button submitButtom, btnFacebook;
 	private EditText user_name;
 	private EditText user_email;
 	private EditText user_phone;
@@ -32,6 +46,8 @@ public class RegisterActivity extends Activity implements OnClickListener,
 
 	private SamsungMomWebservices ws;
 	private Spinner user_country;
+
+	private Handler mHandler = new Handler();
 
 	String[] countries = { "CO", "BR", "AR", "UY", "PY", "CL", "MX", "PE", "VE" };
 
@@ -64,6 +80,9 @@ public class RegisterActivity extends Activity implements OnClickListener,
 		submitButtom = (Button) findViewById(R.id.btnRegister);
 		submitButtom.setOnClickListener(this);
 
+		btnFacebook = (Button) findViewById(R.id.btnFacebook);
+		btnFacebook.setOnClickListener(this);
+
 		// Webservices
 		ws = new SamsungMomWebservices(Manager.WS_BASE);
 		ws.addObserver(this);
@@ -72,6 +91,47 @@ public class RegisterActivity extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
+		case R.id.btnFacebook:
+			Manager.getInstance().displayLoading(this);
+			if (!SessionStore.restore(Manager.getInstance().fbUtil.facebook,
+					Manager.getInstance().getContext())) {
+
+				Manager.getInstance().fbUtil.facebook.authorize(this,
+						new String[] { "email", "user_location",
+								"publish_stream" }, new DialogListener() {
+							@Override
+							public void onComplete(Bundle values) {
+								Log.i("Facebook", "Facebook:" + values);
+								SessionStore.save(
+										Manager.getInstance().fbUtil.facebook,
+										Manager.getInstance().getContext());
+								getUserInformation();
+							}
+
+							@Override
+							public void onFacebookError(FacebookError error) {
+								Manager.getInstance().hideLoading();
+								Log.e("Facebook", "Error:onFacebookError "
+										+ error.getMessage());
+							}
+
+							@Override
+							public void onError(DialogError e) {
+								Manager.getInstance().hideLoading();
+								Log.e("Facebook",
+										"Error:onError " + e.getMessage());
+							}
+
+							@Override
+							public void onCancel() {
+								Manager.getInstance().hideLoading();
+								Log.e("Facebook", "Error:onCancel");
+							}
+						});
+			} else {
+				getUserInformation();
+			}
+			break;
 		case R.id.btnRegister:
 			Manager.getInstance().NAME = user_name.getText().toString();
 			Manager.getInstance().EMAIL = user_email.getText().toString();
@@ -120,6 +180,72 @@ public class RegisterActivity extends Activity implements OnClickListener,
 		}
 	}
 
+	protected void getUserInformation() {
+		AsyncFacebookRunner mAsyncRunner = new AsyncFacebookRunner(
+				Manager.getInstance().fbUtil.facebook);
+		mAsyncRunner.request("me", new RequestListener() {
+
+			@Override
+			public void onMalformedURLException(MalformedURLException e,
+					Object state) {
+				Manager.getInstance().hideLoading();
+				Log.i("Facebook", "Error:onIOException:me " + e.getMessage());
+			}
+
+			@Override
+			public void onIOException(IOException e, Object state) {
+				Manager.getInstance().hideLoading();
+				Log.i("Facebook", "Error:onIOException:me " + e.getMessage());
+			}
+
+			@Override
+			public void onFileNotFoundException(FileNotFoundException e,
+					Object state) {
+				Manager.getInstance().hideLoading();
+				Log.i("Facebook",
+						"Error:onFileNotFoundException:me " + e.getMessage());
+			}
+
+			@Override
+			public void onFacebookError(FacebookError e, Object state) {
+				Manager.getInstance().hideLoading();
+				Log.e("Facebook", "Error:onFacebookError:me " + e.getMessage());
+			}
+
+			@Override
+			public void onComplete(String response, Object state) {
+				// process the response here: executed in
+				// background thread
+				Log.i("Facebook", "Response: " + response.toString());
+				try {
+					JSONObject json = Util.parseJson(response);
+
+					final String name = json.getString("name");
+					final String email = json.getString("email");
+					// final String location = json
+					// .getJSONObject("location")
+					// .getString("name").split(",")[2];
+					// final String fbId =
+					// json.getString("id");
+
+					mHandler.post(new Runnable() {
+						public void run() {
+							user_email.setText(email);
+							user_name.setText(name);
+							Manager.getInstance().hideLoading();
+						}
+					});
+					// user_country.set
+
+				} catch (FacebookError e) {
+					Log.e("Facebook", "Error:onComplete:1:me " + e.getMessage());
+				} catch (JSONException e) {
+					Log.e("Facebook", "Error:onComplete:2:me " + e.getMessage());
+				}
+			}
+		});
+	}
+
 	@Override
 	public void update(Observable observable, Object data) {
 		Manager.getInstance().hideLoading();
@@ -147,5 +273,12 @@ public class RegisterActivity extends Activity implements OnClickListener,
 				break;
 			}
 		}
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		Manager.getInstance().fbUtil.facebook.authorizeCallback(requestCode,
+				resultCode, data);
 	}
 }
