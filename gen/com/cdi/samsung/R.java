@@ -22,11 +22,13 @@ public final class R {
         public static final int facebook_icon=0x7f020001;
         public static final int file=0x7f020002;
         public static final int folder=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int ic_pulltorefresh_arrow=0x7f020005;
-        public static final int icon=0x7f020006;
-        public static final int mom=0x7f020007;
-        public static final int pull_to_refresh_header_background=0x7f020008;
+        public static final int home_app_01=0x7f020004;
+        public static final int home_app_02=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_pulltorefresh_arrow=0x7f020007;
+        public static final int icon=0x7f020008;
+        public static final int mom=0x7f020009;
+        public static final int pull_to_refresh_header_background=0x7f02000a;
     }
     public static final class id {
         public static final int btnFacebook=0x7f07001d;
@@ -40,6 +42,8 @@ public final class R {
         public static final int fdrowtext=0x7f070006;
         public static final int idImage=0x7f070008;
         public static final int idProgressBar=0x7f070007;
+        public static final int imageView1=0x7f070025;
+        public static final int imageView2=0x7f070026;
         public static final int linearLayout1=0x7f07000e;
         public static final int linearLayout2=0x7f07000b;
         public static final int momName=0x7f070009;
