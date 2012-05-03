@@ -39,7 +39,7 @@ public final class R {
     public static final class id {
         public static final int AbsoluteLayout1=0x7f070013;
         public static final int btnFacebook=0x7f070025;
-        public static final int btnPostulate=0x7f070018;
+        public static final int btnPostulate=0x7f070016;
         public static final int btnRegister=0x7f07001e;
         public static final int fbVote=0x7f070012;
         public static final int fdButtonBack=0x7f070002;
@@ -58,10 +58,10 @@ public final class R {
         public static final int mom_rating=0x7f070010;
         public static final int moms=0x7f07000a;
         public static final int path=0x7f070004;
-        public static final int pos_name=0x7f070014;
-        public static final int pos_smart_mother_sentence=0x7f070016;
-        public static final int pos_tipical_sentence=0x7f070015;
-        public static final int pos_why_be_mother_of_year=0x7f070017;
+        public static final int pos_name=0x7f070015;
+        public static final int pos_smart_mother_sentence=0x7f070017;
+        public static final int pos_tipical_sentence=0x7f070018;
+        public static final int pos_why_be_mother_of_year=0x7f070014;
         public static final int pull_to_refresh_header=0x7f070019;
         public static final int pull_to_refresh_image=0x7f07001b;
         public static final int pull_to_refresh_progress=0x7f07001a;
