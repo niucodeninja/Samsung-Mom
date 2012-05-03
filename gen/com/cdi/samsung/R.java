@@ -14,26 +14,33 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int gray=0x7f040001;
+        public static final int gray=0x7f040002;
+        public static final int terms_color=0x7f040001;
         public static final int white_color=0x7f040000;
     }
     public static final class drawable {
         public static final int close=0x7f020000;
-        public static final int facebook_icon=0x7f020001;
-        public static final int file=0x7f020002;
-        public static final int folder=0x7f020003;
-        public static final int home_app_01=0x7f020004;
-        public static final int home_app_02=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int ic_pulltorefresh_arrow=0x7f020007;
-        public static final int icon=0x7f020008;
-        public static final int mom=0x7f020009;
-        public static final int pull_to_refresh_header_background=0x7f02000a;
+        public static final int continue_btn=0x7f020001;
+        public static final int facebook_icon=0x7f020002;
+        public static final int file=0x7f020003;
+        public static final int folder=0x7f020004;
+        public static final int home_app_01=0x7f020005;
+        public static final int home_app_02=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int ic_pulltorefresh_arrow=0x7f020008;
+        public static final int icon=0x7f020009;
+        public static final int mom=0x7f02000a;
+        public static final int postulate=0x7f02000b;
+        public static final int pull_to_refresh_header_background=0x7f02000c;
+        public static final int register=0x7f02000d;
+        public static final int splashscreen=0x7f02000e;
+        public static final int up_photo_btn=0x7f02000f;
     }
     public static final class id {
-        public static final int btnFacebook=0x7f07001d;
-        public static final int btnPostulate=0x7f070017;
-        public static final int btnRegister=0x7f070024;
+        public static final int AbsoluteLayout1=0x7f070013;
+        public static final int btnFacebook=0x7f070025;
+        public static final int btnPostulate=0x7f070018;
+        public static final int btnRegister=0x7f07001e;
         public static final int fbVote=0x7f070012;
         public static final int fdButtonBack=0x7f070002;
         public static final int fdButtonSelect=0x7f070003;
@@ -42,8 +49,7 @@ public final class R {
         public static final int fdrowtext=0x7f070006;
         public static final int idImage=0x7f070008;
         public static final int idProgressBar=0x7f070007;
-        public static final int imageView1=0x7f070025;
-        public static final int imageView2=0x7f070026;
+        public static final int imageView1=0x7f070026;
         public static final int linearLayout1=0x7f07000e;
         public static final int linearLayout2=0x7f07000b;
         public static final int momName=0x7f070009;
@@ -52,20 +58,20 @@ public final class R {
         public static final int mom_rating=0x7f070010;
         public static final int moms=0x7f07000a;
         public static final int path=0x7f070004;
-        public static final int pos_name=0x7f070013;
-        public static final int pos_smart_mother_sentence=0x7f070015;
-        public static final int pos_tipical_sentence=0x7f070014;
-        public static final int pos_why_be_mother_of_year=0x7f070016;
-        public static final int pull_to_refresh_header=0x7f070018;
-        public static final int pull_to_refresh_image=0x7f07001a;
-        public static final int pull_to_refresh_progress=0x7f070019;
-        public static final int pull_to_refresh_text=0x7f07001b;
-        public static final int pull_to_refresh_updated_at=0x7f07001c;
-        public static final int reg_country=0x7f070021;
-        public static final int reg_email=0x7f07001f;
-        public static final int reg_information=0x7f070022;
-        public static final int reg_name=0x7f07001e;
-        public static final int reg_phone=0x7f070020;
+        public static final int pos_name=0x7f070014;
+        public static final int pos_smart_mother_sentence=0x7f070016;
+        public static final int pos_tipical_sentence=0x7f070015;
+        public static final int pos_why_be_mother_of_year=0x7f070017;
+        public static final int pull_to_refresh_header=0x7f070019;
+        public static final int pull_to_refresh_image=0x7f07001b;
+        public static final int pull_to_refresh_progress=0x7f07001a;
+        public static final int pull_to_refresh_text=0x7f07001c;
+        public static final int pull_to_refresh_updated_at=0x7f07001d;
+        public static final int reg_country=0x7f070022;
+        public static final int reg_email=0x7f070021;
+        public static final int reg_information=0x7f070024;
+        public static final int reg_name=0x7f070020;
+        public static final int reg_phone=0x7f07001f;
         public static final int reg_terms=0x7f070023;
         public static final int relativeLayout01=0x7f070000;
         public static final int textView1=0x7f07000f;

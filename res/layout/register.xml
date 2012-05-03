@@ -1,113 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fillViewport="true" >
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register" >
 
     <!-- Registration Form -->
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dip" >
+        android:layout_x="-1dp"
+        android:layout_y="61dp"
+        android:text="@string/c_register_submit" />
 
-        
-        
-        <!-- Full Name Label -->
+    <EditText
+        android:id="@+id/reg_phone"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_x="179dp"
+        android:layout_y="340dp"
+        android:inputType="phone"
+        android:singleLine="true" />
 
-        <Button
-            android:id="@+id/btnFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_using_fb" />
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_x="179dp"
+        android:layout_y="253dp"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_full_name" />
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_x="179dp"
+        android:layout_y="297dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
 
-        <EditText
-            android:id="@+id/reg_name"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dip"
-            android:layout_marginTop="5dip"
-            android:inputType="textPersonName"
-            android:singleLine="true" >
+    <Spinner
+        android:id="@+id/reg_country"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_x="179dp"
+        android:layout_y="382dp"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/c_register_prompt" />
 
-            <requestFocus />
+    <CheckBox
+        android:id="@+id/reg_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="85dp"
+        android:layout_y="437dp"
+        android:text="@string/c_register_terms"
+        android:textColor="@color/terms_color" />
 
-        </EditText>
+    <CheckBox
+        android:id="@+id/reg_information"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_x="85dp"
+        android:layout_y="490dp"
+        android:text="@string/c_register_samsung_info"
+        android:textColor="@color/terms_color" />
 
-        <!-- Email Label -->
+    <Button
+        android:id="@+id/btnFacebook"
+        android:layout_width="121dp"
+        android:layout_height="34dp"
+        android:layout_x="192dp"
+        android:layout_y="559dp"
+        android:background="@drawable/continue_btn" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_email" />
-
-        <EditText
-            android:id="@+id/reg_email"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dip"
-            android:layout_marginTop="5dip"
-            android:inputType="textEmailAddress"
-            android:singleLine="true" />
-
-        <!-- Phone Label -->
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_phone" />
-
-        <EditText
-            android:id="@+id/reg_phone"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dip"
-            android:layout_marginTop="5dip"
-            android:inputType="phone"
-            android:singleLine="true" />
-
-        <!-- Country Label -->
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_country" />
-
-        <Spinner
-            android:id="@+id/reg_country"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dip"
-            android:layout_marginTop="5dip"
-            android:drawSelectorOnTop="true"
-            android:prompt="@string/c_register_prompt" />
-        <!-- Register Button -->
-
-        <CheckBox
-            android:id="@+id/reg_information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_samsung_info" />
-
-        <CheckBox
-            android:id="@+id/reg_terms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/c_register_terms" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:text="@string/c_register_submit" />
-    </LinearLayout>
-
-</ScrollView>
+</AbsoluteLayout>
