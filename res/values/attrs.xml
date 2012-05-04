@@ -5,4 +5,7 @@
     </declare-styleable>
     <color name="white_color">#FFFFFF</color>
     <color name="terms_color">#5E5E5E</color>
+    <color name="mom_name_color">#B82D76</color>
+    <color name="mom_title_color">#FFFFFF</color>
+    <color name="flowers_color">#55052F</color>
 </resources>

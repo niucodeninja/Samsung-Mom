@@ -65,6 +65,9 @@ public class ImageAdapter extends BaseAdapter {
 		// if (flags[position] == false) {
 		ImageView image = (ImageView) convertView.findViewById(R.id.idImage);
 		TextView momName = (TextView) convertView.findViewById(R.id.momName);
+		TextView votos = (TextView) convertView.findViewById(R.id.mom_flowers);
+		TextView tipica = (TextView) convertView.findViewById(R.id.tipical_mom);
+		TextView description = (TextView) convertView.findViewById(R.id.description_mom);
 
 		// image.setBackgroundResource(item_background);
 		image.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -73,6 +76,10 @@ public class ImageAdapter extends BaseAdapter {
 		BitmapDownloaderTask task = new BitmapDownloaderTask(image, progressBar);
 		task.execute(listOfMoms.get(position).getPic3());
 		momName.setText(listOfMoms.get(position).getName());
+		//votos.setText(listOfMoms.get(position).getVotes());
+		
+		tipica.setText(listOfMoms.get(position).getTypicalSentence());
+		description.setText(listOfMoms.get(position).getWhyBeASmartMom());
 		// flags[position] = true;
 		// }
 		// convertView.setLayoutParams(new Gallery.LayoutParams(150, 100));
