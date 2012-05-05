@@ -265,7 +265,7 @@ public class RegisterActivity extends Activity implements OnClickListener,
 							getResources().getString(
 									R.string.c_reg_user_fail_loading));
 				}
-				Manager.getInstance().getDispatcher().open(this, "home", true);
+				Manager.getInstance().getDispatcher().open(this, "menu", true);
 				break;
 			case SamsungMomWebservices.REGISTER_ERROR:
 				Manager.getInstance().showMessage(this,

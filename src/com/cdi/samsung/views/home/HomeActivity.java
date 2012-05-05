@@ -10,9 +10,6 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Gallery;
@@ -25,10 +22,10 @@ import com.niucodeninja.webservices.WebServicesEvent;
 
 public class HomeActivity extends Activity implements Observer {
 
-	private final int EXIT_APP = 0x9;
-	private final int RANKING = 0x8;
-	private final int POSTULATE = 0x7;
-	private final int SEE_MY_MOM = 0x6;
+	/*
+	 * private final int EXIT_APP = 0x9; private final int RANKING = 0x8;
+	 * private final int POSTULATE = 0x7; private final int SEE_MY_MOM = 0x6;
+	 */
 
 	private Gallery moms_gallery;
 	private SamsungMomWebservices ws;
@@ -72,47 +69,28 @@ public class HomeActivity extends Activity implements Observer {
 		}
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		menu.add(Menu.NONE, EXIT_APP, Menu.NONE, R.string.c_exit_app);
-		menu.add(Menu.NONE, RANKING, Menu.NONE, R.string.c_ranking);
-		if (Manager.getInstance().POSTULATE.equals("0")) {
-			menu.add(Menu.NONE, POSTULATE, Menu.NONE, R.string.c_postulate);
-		} else {
-			menu.add(Menu.NONE, SEE_MY_MOM, Menu.NONE, R.string.c_see_my_mom);
-		}
-		return true;
-	}
-
-	@Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		return super.onPrepareOptionsMenu(menu);
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int itemId = item.getItemId();
-		switch (itemId) {
-		case EXIT_APP:
-			System.exit(0);
-			break;
-		case RANKING:
-			Manager.getInstance().getDispatcher().open(this, "ranking", false);
-			break;
-		case POSTULATE:
-			Manager.getInstance().getDispatcher()
-					.open(this, "postulate", false);
-			break;
-		case SEE_MY_MOM:
-			Manager.getInstance().currentMom = Manager.getInstance().userMom;
-			Manager.getInstance().getDispatcher().open(this, "mom", false);
-			break;
-		default:
-			return false;
-		}
-		return true;
-	}
+	/*
+	 * @Override public boolean onCreateOptionsMenu(Menu menu) {
+	 * super.onCreateOptionsMenu(menu); menu.add(Menu.NONE, EXIT_APP, Menu.NONE,
+	 * R.string.c_exit_app); menu.add(Menu.NONE, RANKING, Menu.NONE,
+	 * R.string.c_ranking); if (Manager.getInstance().POSTULATE.equals("0")) {
+	 * menu.add(Menu.NONE, POSTULATE, Menu.NONE, R.string.c_postulate); } else {
+	 * menu.add(Menu.NONE, SEE_MY_MOM, Menu.NONE, R.string.c_see_my_mom); }
+	 * return true; }
+	 * 
+	 * @Override public boolean onPrepareOptionsMenu(Menu menu) { return
+	 * super.onPrepareOptionsMenu(menu); }
+	 * 
+	 * @Override public boolean onOptionsItemSelected(MenuItem item) { int
+	 * itemId = item.getItemId(); switch (itemId) { case EXIT_APP:
+	 * System.exit(0); break; case RANKING:
+	 * Manager.getInstance().getDispatcher().open(this, "ranking", false);
+	 * break; case POSTULATE: Manager.getInstance().getDispatcher() .open(this,
+	 * "postulate", false); break; case SEE_MY_MOM:
+	 * Manager.getInstance().currentMom = Manager.getInstance().userMom;
+	 * Manager.getInstance().getDispatcher().open(this, "mom", false); break;
+	 * default: return false; } return true; }
+	 */
 
 	@Override
 	public void update(Observable observable, Object data) {
@@ -154,13 +132,10 @@ public class HomeActivity extends Activity implements Observer {
 		}
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			// preventing default implementation previous to
-			// android.os.Build.VERSION_CODES.ECLAIR
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
+	/*
+	 * @Override public boolean onKeyDown(int keyCode, KeyEvent event) { if
+	 * (keyCode == KeyEvent.KEYCODE_BACK) { // preventing default implementation
+	 * previous to // android.os.Build.VERSION_CODES.ECLAIR return true; }
+	 * return super.onKeyDown(keyCode, event); }
+	 */
 }

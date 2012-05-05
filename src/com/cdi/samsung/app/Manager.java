@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.cdi.samsung.R;
 import com.cdi.samsung.app.models.Mom;
 import com.cdi.samsung.app.postulate.PostulateActivity;
+import com.cdi.samsung.views.MenuActivity;
 import com.cdi.samsung.views.home.HomeActivity;
 import com.cdi.samsung.views.mom.MomActivity;
 import com.cdi.samsung.views.ranking.RankingActivity;
@@ -43,8 +44,10 @@ public class Manager {
 	public ArrayList<Mom> listOfMoms;
 	public Mom currentMom, userMom;
 	public FacebookUtil fbUtil;
+	public boolean postulatedMom;
 
 	private Manager() {
+		postulatedMom = false;
 	}
 
 	/**
@@ -65,6 +68,7 @@ public class Manager {
 		dispatcher.addHandler("register", RegisterActivity.class);
 		dispatcher.addHandler("postulate", PostulateActivity.class);
 		dispatcher.addHandler("mom", MomActivity.class);
+		dispatcher.addHandler("menu", MenuActivity.class);
 		/*
 		 * dispatcher.addHandler("countries", ListCountries.class);
 		 * dispatcher.addHandler("teams", ListTeams.class);

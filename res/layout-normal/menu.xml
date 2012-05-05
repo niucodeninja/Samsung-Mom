@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <AbsoluteLayout
+        android:id="@+id/AbsoluteLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background" >
+
+        <Button
+            android:id="@+id/vote_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="210dp"
+            android:layout_y="103dp"
+            android:background="@drawable/vote_menu_btn"
+            android:paddingRight="20dp" />
+
+        <Button
+            android:id="@+id/momsapp_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="207dp"
+            android:layout_y="240dp"
+            android:background="@drawable/momapps_menu_btn" />
+
+        <Button
+            android:id="@+id/mecanica_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="210dp"
+            android:layout_y="372dp"
+            android:background="@drawable/mecanica_menu_btn" />
+
+        <Button
+            android:id="@+id/postulate_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="39dp"
+            android:layout_y="108dp"
+            android:background="@drawable/postulabe_menu_btn" />
+
+        <Button
+            android:id="@+id/ranking_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="42dp"
+            android:layout_y="239dp"
+            android:background="@drawable/ranking_menu_btn" />
+
+        <Button
+            android:id="@+id/status_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="42dp"
+            android:layout_y="371dp"
+            android:background="@drawable/status_menu_btn" />
+    </AbsoluteLayout>
+
+</ScrollView>

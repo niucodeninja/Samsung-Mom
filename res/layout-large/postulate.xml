@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- L -->
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/postulate" >
+
+    <!-- Registration Form -->
+
+    <Button
+        android:id="@+id/btnPostulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="93dp"
+        android:layout_y="526dp"
+        android:background="@drawable/up_photo_btn" />
+
+    <EditText
+        android:id="@+id/pos_why_be_mother_of_year"
+        android:layout_width="286dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_x="89dp"
+        android:layout_y="427dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="false"
+        android:textSize="9dp" />
+
+    <EditText
+        android:id="@+id/pos_smart_mother_sentence"
+        android:layout_width="286dp"
+        android:layout_height="30dp"
+        android:layout_x="91dp"
+        android:layout_y="361dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="true"
+        android:textSize="9dp" />
+
+    <EditText
+        android:id="@+id/pos_tipical_sentence"
+        android:layout_width="285dp"
+        android:layout_height="30dp"
+        android:layout_x="92dp"
+        android:layout_y="308dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="true"
+        android:textSize="9dp" />
+
+    <EditText
+        android:id="@+id/pos_name"
+        android:layout_width="217dp"
+        android:layout_height="30dp"
+        android:layout_x="158dp"
+        android:layout_y="258dp"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="9dp" >
+
+        <requestFocus />
+    </EditText>
+
+</AbsoluteLayout>

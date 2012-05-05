@@ -100,6 +100,7 @@ public class PostulateActivity extends Activity implements OnClickListener,
 				params.AddParam("a", "postular");
 				params.AddParam("imei", Manager.getInstance().IMEI);
 				params.AddParam("clave", Manager.getInstance().PASSWORD);
+				params.AddParam("nombre_mama", Manager.getInstance().PASSWORD);
 				params.AddParam("frase_tipica", tsentence);
 				params.AddParam("smart_favorito", smother_sentence);
 				params.AddParam("frase_porque", wmother_of_year);
@@ -138,7 +139,7 @@ public class PostulateActivity extends Activity implements OnClickListener,
 								getResources().getString(
 										R.string.c_postulate_ok));
 						Manager.getInstance().getDispatcher()
-								.open(this, "home", true);
+								.open(this, "menu", true);
 					} else {
 						Manager.getInstance().showMessage(
 								this,

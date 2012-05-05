@@ -114,7 +114,7 @@ public class SplashScreenActivity extends Activity implements
 								.getString("postulada");
 
 						Manager.getInstance().getDispatcher()
-								.open(this, "home", true);
+								.open(this, "menu", true);
 
 						// User mom
 						Manager.getInstance().userMom = new Mom(user);
