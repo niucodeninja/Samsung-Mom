@@ -9,49 +9,49 @@
         android:id="@+id/postulate_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="70dp"
-        android:layout_y="165dp"
+        android:layout_x="78dp"
+        android:layout_y="152dp"
         android:background="@drawable/postulabe_menu_btn" />
-
-    <Button
-        android:id="@+id/vote_menu_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="288dp"
-        android:layout_y="171dp"
-        android:background="@drawable/vote_menu_btn"
-        android:paddingRight="20dp" />
 
     <Button
         android:id="@+id/ranking_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="79dp"
-        android:layout_y="337dp"
+        android:layout_x="76dp"
+        android:layout_y="282dp"
         android:background="@drawable/ranking_menu_btn" />
+
+    <Button
+        android:id="@+id/vote_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="208dp"
+        android:layout_y="152dp"
+        android:background="@drawable/vote_menu_btn"
+        android:paddingRight="20dp" />
 
     <Button
         android:id="@+id/momsapp_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="292dp"
-        android:layout_y="347dp"
+        android:layout_x="208dp"
+        android:layout_y="273dp"
         android:background="@drawable/momapps_menu_btn" />
 
     <Button
         android:id="@+id/status_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="85dp"
-        android:layout_y="554dp"
+        android:layout_x="80dp"
+        android:layout_y="415dp"
         android:background="@drawable/status_menu_btn" />
 
     <Button
         android:id="@+id/mecanica_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="299dp"
-        android:layout_y="565dp"
+        android:layout_x="214dp"
+        android:layout_y="410dp"
         android:background="@drawable/mecanica_menu_btn" />
 
 </AbsoluteLayout>

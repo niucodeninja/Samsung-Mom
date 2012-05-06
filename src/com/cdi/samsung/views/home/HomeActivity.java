@@ -38,15 +38,15 @@ public class HomeActivity extends Activity implements Observer {
 		moms_gallery = (Gallery) findViewById(R.id.moms);
 
 		// On select Mom's picture
-		final Activity activity = this;
+		//final Activity activity = this;
 		moms_gallery.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0,
 					android.view.View arg1, int position, long arg3) {
-				Manager.getInstance().currentMom = Manager.getInstance().listOfMoms
+				/*Manager.getInstance().currentMom = Manager.getInstance().listOfMoms
 						.get(position);
 				Manager.getInstance().getDispatcher()
-						.open(activity, "mom", false);
+						.open(activity, "mom", false);*/
 			}
 		});
 

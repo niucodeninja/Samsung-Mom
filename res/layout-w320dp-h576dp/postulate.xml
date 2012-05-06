@@ -9,35 +9,12 @@
     <!-- Registration Form -->
 
     <EditText
-        android:id="@+id/pos_why_be_mother_of_year"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dip"
-        android:layout_marginTop="5dip"
-        android:layout_x="46dp"
-        android:layout_y="413dp"
-        android:inputType="textAutoComplete"
-        android:singleLine="false"
-        android:textSize="9dp" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/btnPostulate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="480dp"
-        android:background="@drawable/up_photo_btn" />
-
-    <EditText
-        android:id="@+id/pos_smart_mother_sentence"
-        android:layout_width="204dp"
+        android:id="@+id/pos_name"
+        android:layout_width="160dp"
         android:layout_height="30dp"
-        android:layout_x="39dp"
-        android:layout_y="325dp"
-        android:inputType="textAutoComplete"
+        android:layout_x="97dp"
+        android:layout_y="182dp"
+        android:inputType="textPersonName"
         android:singleLine="true"
         android:textSize="9dp" />
 
@@ -45,20 +22,40 @@
         android:id="@+id/pos_tipical_sentence"
         android:layout_width="204dp"
         android:layout_height="30dp"
-        android:layout_x="39dp"
-        android:layout_y="264dp"
+        android:layout_x="40dp"
+        android:layout_y="238dp"
         android:inputType="textAutoComplete"
         android:singleLine="true"
         android:textSize="9dp" />
 
     <EditText
-        android:id="@+id/pos_name"
-        android:layout_width="160dp"
+        android:id="@+id/pos_smart_mother_sentence"
+        android:layout_width="204dp"
         android:layout_height="30dp"
-        android:layout_x="108dp"
-        android:layout_y="208dp"
-        android:inputType="textPersonName"
+        android:layout_x="38dp"
+        android:layout_y="293dp"
+        android:inputType="textAutoComplete"
         android:singleLine="true"
         android:textSize="9dp" />
+
+    <EditText
+        android:id="@+id/pos_why_be_mother_of_year"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_x="45dp"
+        android:layout_y="362dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="false"
+        android:textSize="9dp" />
+
+    <Button
+        android:id="@+id/btnPostulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="44dp"
+        android:layout_y="416dp"
+        android:background="@drawable/up_photo_btn" />
 
 </AbsoluteLayout>

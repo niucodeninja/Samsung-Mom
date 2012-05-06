@@ -6,52 +6,52 @@
     android:background="@drawable/background" >
 
     <Button
-        android:id="@+id/postulate_menu_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="68dp"
-        android:layout_y="196dp"
-        android:background="@drawable/postulabe_menu_btn" />
-
-    <Button
         android:id="@+id/vote_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="426dp"
+        android:layout_x="371dp"
         android:layout_y="197dp"
         android:background="@drawable/vote_menu_btn"
         android:paddingRight="20dp" />
 
     <Button
-        android:id="@+id/ranking_menu_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="80dp"
-        android:layout_y="402dp"
-        android:background="@drawable/ranking_menu_btn" />
-
-    <Button
         android:id="@+id/momsapp_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="418dp"
+        android:layout_x="363dp"
         android:layout_y="402dp"
         android:background="@drawable/momapps_menu_btn" />
-
-    <Button
-        android:id="@+id/status_menu_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="88dp"
-        android:layout_y="631dp"
-        android:background="@drawable/status_menu_btn" />
 
     <Button
         android:id="@+id/mecanica_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="431dp"
+        android:layout_x="376dp"
         android:layout_y="641dp"
         android:background="@drawable/mecanica_menu_btn" />
+
+    <Button
+        android:id="@+id/postulate_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="98dp"
+        android:layout_y="199dp"
+        android:background="@drawable/postulabe_menu_btn" />
+
+    <Button
+        android:id="@+id/ranking_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="405dp"
+        android:background="@drawable/ranking_menu_btn" />
+
+    <Button
+        android:id="@+id/status_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="118dp"
+        android:layout_y="634dp"
+        android:background="@drawable/status_menu_btn" />
 
 </AbsoluteLayout>

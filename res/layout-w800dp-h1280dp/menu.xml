@@ -26,32 +26,32 @@
         android:id="@+id/ranking_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="161dp"
-        android:layout_y="580dp"
+        android:layout_x="141dp"
+        android:layout_y="581dp"
         android:background="@drawable/ranking_menu_btn" />
 
     <Button
         android:id="@+id/momsapp_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="499dp"
-        android:layout_y="580dp"
+        android:layout_x="479dp"
+        android:layout_y="581dp"
         android:background="@drawable/momapps_menu_btn" />
 
     <Button
         android:id="@+id/status_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="166dp"
-        android:layout_y="907dp"
+        android:layout_x="146dp"
+        android:layout_y="908dp"
         android:background="@drawable/status_menu_btn" />
 
     <Button
         android:id="@+id/mecanica_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="509dp"
-        android:layout_y="917dp"
+        android:layout_x="489dp"
+        android:layout_y="918dp"
         android:background="@drawable/mecanica_menu_btn" />
 
 </AbsoluteLayout>

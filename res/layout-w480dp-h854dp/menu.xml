@@ -11,15 +11,6 @@
         android:background="@drawable/background" >
 
         <Button
-            android:id="@+id/vote_menu_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_x="239dp"
-            android:layout_y="175dp"
-            android:background="@drawable/vote_menu_btn"
-            android:paddingRight="20dp" />
-
-        <Button
             android:id="@+id/postulate_menu_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,28 +27,37 @@
             android:background="@drawable/ranking_menu_btn" />
 
         <Button
-            android:id="@+id/momsapp_menu_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_x="239dp"
-            android:layout_y="361dp"
-            android:background="@drawable/momapps_menu_btn" />
-
-        <Button
-            android:id="@+id/mecanica_menu_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_x="246dp"
-            android:layout_y="562dp"
-            android:background="@drawable/mecanica_menu_btn" />
-
-        <Button
             android:id="@+id/status_menu_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_x="78dp"
             android:layout_y="561dp"
             android:background="@drawable/status_menu_btn" />
+
+        <Button
+            android:id="@+id/vote_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="272dp"
+            android:layout_y="180dp"
+            android:background="@drawable/vote_menu_btn"
+            android:paddingRight="20dp" />
+
+        <Button
+            android:id="@+id/momsapp_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="272dp"
+            android:layout_y="366dp"
+            android:background="@drawable/momapps_menu_btn" />
+
+        <Button
+            android:id="@+id/mecanica_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="279dp"
+            android:layout_y="567dp"
+            android:background="@drawable/mecanica_menu_btn" />
     </AbsoluteLayout>
 
 </ScrollView>

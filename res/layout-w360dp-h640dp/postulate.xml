@@ -8,42 +8,45 @@
 
     <!-- Registration Form -->
 
-    <EditText
-        android:id="@+id/pos_why_be_mother_of_year"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dip"
-        android:layout_marginTop="5dip"
-        android:layout_x="40dp"
-        android:layout_y="361dp"
-        android:inputType="textAutoComplete"
-        android:singleLine="false"
-        android:textSize="9dp" />
-
     <Button
         android:id="@+id/btnPostulate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="40dp"
-        android:layout_y="411dp"
+        android:layout_x="39dp"
+        android:layout_y="488dp"
         android:background="@drawable/up_photo_btn" />
+
+    <EditText
+        android:id="@+id/pos_why_be_mother_of_year"
+        android:layout_width="204dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_x="44dp"
+        android:layout_y="412dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="false"
+        android:textSize="9dp" />
 
     <EditText
         android:id="@+id/pos_smart_mother_sentence"
         android:layout_width="204dp"
         android:layout_height="30dp"
-        android:layout_x="40dp"
-        android:layout_y="282dp"
+        android:layout_x="46dp"
+        android:layout_y="327dp"
         android:inputType="textAutoComplete"
         android:singleLine="true"
-        android:textSize="9dp" />
+        android:textSize="9dp" >
+
+        <requestFocus />
+    </EditText>
 
     <EditText
         android:id="@+id/pos_tipical_sentence"
         android:layout_width="204dp"
         android:layout_height="30dp"
-        android:layout_x="40dp"
-        android:layout_y="232dp"
+        android:layout_x="44dp"
+        android:layout_y="265dp"
         android:inputType="textAutoComplete"
         android:singleLine="true"
         android:textSize="9dp" />
@@ -52,8 +55,8 @@
         android:id="@+id/pos_name"
         android:layout_width="160dp"
         android:layout_height="30dp"
-        android:layout_x="94dp"
-        android:layout_y="179dp"
+        android:layout_x="106dp"
+        android:layout_y="206dp"
         android:inputType="textPersonName"
         android:singleLine="true"
         android:textSize="9dp" />
