@@ -72,19 +72,19 @@ public final class R {
         public static final int mom_image=0x7f070018;
         public static final int mom_loading=0x7f070017;
         public static final int moms=0x7f07000e;
-        public static final int momsapp_menu_btn=0x7f070014;
+        public static final int momsapp_menu_btn=0x7f070010;
         public static final int path=0x7f070004;
         public static final int pos_name=0x7f070021;
         public static final int pos_smart_mother_sentence=0x7f07001f;
         public static final int pos_tipical_sentence=0x7f070020;
         public static final int pos_why_be_mother_of_year=0x7f07001e;
-        public static final int postulate_menu_btn=0x7f070012;
+        public static final int postulate_menu_btn=0x7f070011;
         public static final int pull_to_refresh_header=0x7f070022;
         public static final int pull_to_refresh_image=0x7f070024;
         public static final int pull_to_refresh_progress=0x7f070023;
         public static final int pull_to_refresh_text=0x7f070025;
         public static final int pull_to_refresh_updated_at=0x7f070026;
-        public static final int ranking_menu_btn=0x7f070011;
+        public static final int ranking_menu_btn=0x7f07000f;
         public static final int reg_country=0x7f07002b;
         public static final int reg_email=0x7f070029;
         public static final int reg_information=0x7f07002d;
@@ -92,11 +92,11 @@ public final class R {
         public static final int reg_phone=0x7f07002a;
         public static final int reg_terms=0x7f07002c;
         public static final int relativeLayout01=0x7f070000;
-        public static final int status_menu_btn=0x7f070010;
+        public static final int status_menu_btn=0x7f070014;
         public static final int textView1=0x7f07001a;
         public static final int tipical_mom=0x7f07000a;
         public static final int voteSubmit=0x7f07001b;
-        public static final int vote_menu_btn=0x7f07000f;
+        public static final int vote_menu_btn=0x7f070012;
     }
     public static final class layout {
         public static final int file_dialog_main=0x7f030000;

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2 -->
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/postulate" >
+
+    <!-- Registration Form -->
+
+    <EditText
+        android:id="@+id/pos_why_be_mother_of_year"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_x="40dp"
+        android:layout_y="295dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="false"
+        android:textSize="9dp" />
+
+    <Button
+        android:id="@+id/btnPostulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="41dp"
+        android:layout_y="345dp"
+        android:background="@drawable/up_photo_btn" />
+
+    <EditText
+        android:id="@+id/pos_smart_mother_sentence"
+        android:layout_width="204dp"
+        android:layout_height="30dp"
+        android:layout_x="40dp"
+        android:layout_y="232dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="true"
+        android:textSize="9dp" />
+
+    <EditText
+        android:id="@+id/pos_tipical_sentence"
+        android:layout_width="204dp"
+        android:layout_height="30dp"
+        android:layout_x="40dp"
+        android:layout_y="190dp"
+        android:inputType="textAutoComplete"
+        android:singleLine="true"
+        android:textSize="9dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/pos_name"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_x="94dp"
+        android:layout_y="148dp"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="9dp" />
+
+</AbsoluteLayout>

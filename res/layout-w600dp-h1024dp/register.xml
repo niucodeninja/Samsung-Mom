@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register" >
+
+    <!-- Registration Form -->
+
+    <Button
+        android:id="@+id/btnFacebook"
+        android:layout_width="121dp"
+        android:layout_height="34dp"
+        android:layout_x="295dp"
+        android:layout_y="212dp"
+        android:background="@drawable/continue_btn" />
+
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_x="224dp"
+        android:layout_y="311dp"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_x="225dp"
+        android:layout_y="363dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/reg_phone"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_x="226dp"
+        android:layout_y="412dp"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/reg_country"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_x="230dp"
+        android:layout_y="471dp"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/c_register_prompt" />
+
+    <CheckBox
+        android:id="@+id/reg_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="109dp"
+        android:layout_y="537dp"
+        android:text="@string/c_register_terms"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/terms_color"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/reg_information"
+        android:layout_width="424dp"
+        android:layout_height="wrap_content"
+        android:layout_x="108dp"
+        android:layout_y="602dp"
+        android:text="@string/c_register_samsung_info"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/terms_color"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="115dp"
+        android:layout_y="668dp"
+        android:background="@drawable/continue_btn" />
+
+</AbsoluteLayout>

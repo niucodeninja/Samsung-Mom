@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gallery_item_background" >
+
+    <ProgressBar
+        android:id="@+id/idProgressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="200dp" />
+
+    <ImageView
+        android:id="@+id/idImage"
+        android:layout_width="184dp"
+        android:layout_height="151dp"
+        android:layout_x="64dp"
+        android:layout_y="139dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tipical_mom"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_x="49dp"
+        android:layout_y="326dp" />
+
+    <TextView
+        android:id="@+id/description_mom"
+        android:layout_width="229dp"
+        android:layout_height="45dp"
+        android:layout_x="50dp"
+        android:layout_y="354dp" />
+
+    <TextView
+        android:id="@+id/mom_flowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="176dp"
+        android:layout_y="120dp"
+        android:textColor="@color/flowers_color" />
+
+    <TextView
+        android:id="@+id/momName"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_x="68dp"
+        android:layout_y="121dp" />
+
+</AbsoluteLayout>

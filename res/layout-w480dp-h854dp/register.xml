@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register" >
+
+    <!-- Registration Form -->
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_x="90dp"
+        android:layout_y="517dp"
+        android:background="@drawable/continue_btn" />
+
+    <CheckBox
+        android:id="@+id/reg_terms"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_x="90dp"
+        android:layout_y="430dp"
+        android:text="@string/c_register_terms"
+        android:textColor="@color/terms_color"
+        android:textSize="10dp" />
+
+    <CheckBox
+        android:id="@+id/reg_information"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_x="90dp"
+        android:layout_y="468dp"
+        android:text="@string/c_register_samsung_info"
+        android:textColor="@color/terms_color"
+        android:textSize="10dp" />
+
+    <EditText
+        android:id="@+id/reg_phone"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_x="182dp"
+        android:layout_y="344dp"
+        android:inputType="phone"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_x="181dp"
+        android:layout_y="301dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_x="182dp"
+        android:layout_y="259dp"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="12dp" />
+
+    <Spinner
+        android:id="@+id/reg_country"
+        android:layout_width="152dp"
+        android:layout_height="40dp"
+        android:layout_x="180dp"
+        android:layout_y="390dp"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/c_register_prompt" />
+
+    <Button
+        android:id="@+id/btnFacebook"
+        android:layout_width="121dp"
+        android:layout_height="34dp"
+        android:layout_x="834dp"
+        android:layout_y="534dp"
+        android:background="@drawable/continue_btn" />
+
+</AbsoluteLayout>

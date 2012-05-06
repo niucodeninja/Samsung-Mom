@@ -20,47 +20,47 @@
         android:layout_width="152dp"
         android:layout_height="30dp"
         android:layout_x="120dp"
-        android:layout_y="164dp"
+        android:layout_y="116dp"
         android:inputType="textPersonName"
         android:singleLine="true"
-        android:textSize="12dp" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/reg_email"
-        android:layout_width="152dp"
-        android:layout_height="30dp"
-        android:layout_x="121dp"
-        android:layout_y="192dp"
-        android:inputType="textEmailAddress"
-        android:singleLine="true" />
+        android:textSize="9dp" />
 
     <EditText
         android:id="@+id/reg_phone"
         android:layout_width="152dp"
         android:layout_height="30dp"
         android:layout_x="121dp"
-        android:layout_y="218dp"
+        android:layout_y="164dp"
         android:inputType="phone"
         android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="152dp"
+        android:layout_height="30dp"
+        android:layout_x="122dp"
+        android:layout_y="140dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
 
     <Spinner
         android:id="@+id/reg_country"
         android:layout_width="152dp"
         android:layout_height="40dp"
         android:layout_x="121dp"
-        android:layout_y="245dp"
+        android:layout_y="192dp"
         android:drawSelectorOnTop="true"
         android:prompt="@string/c_register_prompt" />
 
     <CheckBox
         android:id="@+id/reg_terms"
-        android:layout_width="196dp"
-        android:layout_height="wrap_content"
-        android:layout_x="56dp"
-        android:layout_y="273dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_x="52dp"
+        android:layout_y="220dp"
         android:text="@string/c_register_terms"
         android:textColor="@color/terms_color"
         android:textSize="10dp" />
@@ -68,9 +68,9 @@
     <CheckBox
         android:id="@+id/reg_information"
         android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_x="56dp"
-        android:layout_y="311dp"
+        android:layout_height="35dp"
+        android:layout_x="52dp"
+        android:layout_y="254dp"
         android:text="@string/c_register_samsung_info"
         android:textColor="@color/terms_color"
         android:textSize="10dp" />
@@ -79,8 +79,8 @@
         android:id="@+id/btnRegister"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_x="56dp"
-        android:layout_y="360dp"
+        android:layout_x="54dp"
+        android:layout_y="294dp"
         android:background="@drawable/continue_btn" />
 
 </AbsoluteLayout>

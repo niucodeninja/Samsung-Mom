@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background" >
+
+    <Button
+        android:id="@+id/postulate_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="114dp"
+        android:background="@drawable/postulabe_menu_btn" />
+
+    <Button
+        android:id="@+id/vote_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="215dp"
+        android:layout_y="117dp"
+        android:background="@drawable/vote_menu_btn"
+        android:paddingRight="20dp" />
+
+    <Button
+        android:id="@+id/ranking_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="220dp"
+        android:background="@drawable/ranking_menu_btn" />
+
+    <Button
+        android:id="@+id/momsapp_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="217dp"
+        android:layout_y="216dp"
+        android:background="@drawable/momapps_menu_btn" />
+
+    <Button
+        android:id="@+id/status_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="44dp"
+        android:layout_y="317dp"
+        android:background="@drawable/status_menu_btn" />
+
+    <Button
+        android:id="@+id/mecanica_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="221dp"
+        android:layout_y="324dp"
+        android:background="@drawable/mecanica_menu_btn" />
+
+</AbsoluteLayout>
